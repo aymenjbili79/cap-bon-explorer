@@ -1,4 +1,4 @@
-// Données obligatoires des 8 activités du Cap Bon (Section 4.1)
+// Données obligatoires des 8 activités du Cap Bon
 const ACTIVITIES = [
   {
     id: "A01",
