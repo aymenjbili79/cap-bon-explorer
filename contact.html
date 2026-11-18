@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap Bon Explorer — Contact & FAQ</title>
+  <link href="bootstrap-5.3.9-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img id="logo" src="images/logo.png" alt="Logo Cap Bon Explorer" class="me-2">
+          Cap Bon Explorer
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Réservation</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact / FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h1>Contact & Foire Aux Questions</h1>
+        <p class="text-muted">Une question sur nos parcours au Cap Bon ou sur le fonctionnement du simulateur ? Retrouvez nos coordonnées et nos réponses ci-dessous.</p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-12 col-lg-5">
+          <section class="card p-4 shadow-sm border-0 h-100">
+            <h2 class="h4 mb-3">Nous contacter</h2>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2"><strong>Adresse :</strong> Avenue Habib Bourguiba, 8000 Nabeul, Tunisie</li>
+              <li class="mb-2"><strong>Téléphone :</strong> +216 72 000 123 (numéro fictif)</li>
+              <li class="mb-2"><strong>E-mail :</strong> contact@capbon-explorer.tn</li>
+            </ul>
+
+            <h3 class="h5 mb-2">Horaires d'accueil</h3>
+            <table class="table table-sm table-bordered mb-4">
+              <tbody>
+                <tr>
+                  <td>Lundi – Vendredi</td>
+                  <td>08:30 – 17:30</td>
+                </tr>
+                <tr>
+                  <td>Samedi</td>
+                  <td>09:00 – 13:00</td>
+                </tr>
+                <tr>
+                  <td>Dimanche</td>
+                  <td>Fermé</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div>
+              <h3 class="h5 mb-2">Localisation (Nabeul)</h3>
+              <img src="images/map.jpg" alt="Carte statique situant Nabeul dans la péninsule du Cap Bon" class="img-fluid rounded border">
+            </div>
+          </section>
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <section class="card p-4 shadow-sm border-0 h-100">
+            <h2 class="h4 mb-3">Envoyer un message</h2>
+            <p class="small text-muted">Ce formulaire est une démonstration pédagogique : aucune donnée n'est transmise à un serveur.</p>
+
+            <div id="contact-success" class="alert alert-success d-none" role="status">
+              Votre message a bien été enregistré localement à l'écran. Merci de votre intérêt pour Cap Bon Explorer !
+            </div>
+
+            <form id="contact-form">
+              <div class="mb-3">
+                <label for="contact-nom" class="form-label">Nom complet *</label>
+                <input type="text" id="contact-nom" class="form-control" placeholder="Votre nom" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">Adresse e-mail *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="votre.email@exemple.tn" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-sujet" class="form-label">Sujet *</label>
+                <input type="text" id="contact-sujet" class="form-control" placeholder="Ex : Demande d'information sur un atelier" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Écrivez votre message ici..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-terracotta">Envoyer le message</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <section class="mb-4">
+        <h2 class="h4 mb-3">Foire Aux Questions (FAQ)</h2>
+        <div class="accordion shadow-sm" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                1. La réservation effectuée sur le site est-elle réelle ?
+              </button>
+            </h3>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Non. Cap Bon Explorer est un portail pédagogique réalisé dans le cadre d'un mini-projet universitaire à l'ISET Nabeul. Le formulaire permet uniquement de simuler un tarif et d'afficher un récapitulatif local à l'écran, sans paiement ni envoi de données.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                2. Comment bénéficier de la remise de 10 % sur une activité ?
+              </button>
+            </h3>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Une réduction automatique de 10 % s'applique sur le sous-total dès que vous sélectionnez 4 participants ou plus (jusqu'à 6 personnes maximum par simulation).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                3. Les ateliers d'artisanat à Nabeul sont-ils accessibles aux débutants ?
+              </button>
+            </h3>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Oui, nos ateliers d'initiation à la poterie et de peinture sur céramique sont conçus pour accueillir aussi bien les débutants que les curieux souhaitant découvrir le savoir-faire nabeulien.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                4. Peut-on filtrer les activités par ville ou par thème ?
+              </button>
+            </h3>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Tout à fait. Sur la page « Activités », vous pouvez combiner la barre de recherche par mot-clé (ex. Nabeul, Kélibia, poterie) avec le menu déroulant des catégories (Culture, Artisanat, Nature, Découverte).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2026 Cap Bon Explorer — Projet pédagogique ISET Nabeul.</p>
+      <div>
+        <a href="index.html" class="me-3">Retour à l’accueil</a>
+        <a href="activites.html" class="me-3">Activités</a>
+        <a href="agenda.html">Agenda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap-5.3.9-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (this.checkValidity()) {
+        document.getElementById("contact-success").classList.remove("d-none");
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

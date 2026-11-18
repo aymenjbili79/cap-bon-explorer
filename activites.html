@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap Bon Explorer — Catalogue des activités</title>
+  <link href="bootstrap-5.3.9-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img id="logo" src="images/logo.png" alt="Logo Cap Bon Explorer" class="me-2">
+      Cap Bon Explorer
+    </a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Réservation</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact / FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h1>Catalogue des activités</h1>
+        <p class="text-muted">Explorez nos 8 expériences sélectionnées à travers le Cap Bon, filtrez par thème ou recherchez par mot-clé.</p>
+      </div>
+
+      <!-- Barre de recherche et filtre -->
+      <section class="card p-3 mb-4 shadow-sm border-0" aria-label="Filtres de recherche">
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-md-6">
+            <label for="search-input" class="form-label fw-semibold">Rechercher une activité ou un lieu</label>
+            <input type="text" id="search-input" class="form-control" placeholder="Ex : poterie, Nabeul, Kélibia...">
+          </div>
+          <div class="col-12 col-md-4">
+            <label for="category-select" class="form-label fw-semibold">Catégorie</label>
+            <select id="category-select" class="form-select">
+              <option value="Toutes">Toutes</option>
+              <option value="Culture">Culture</option>
+              <option value="Artisanat">Artisanat</option>
+              <option value="Nature">Nature</option>
+              <option value="Découverte">Découverte</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-2 d-grid">
+            <button type="button" id="reset-filters-btn" class="btn btn-outline-secondary">Effacer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compteur de résultats -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p id="results-counter" class="fw-bold mb-0 text-primary">8 activités trouvées</p>
+      </div>
+
+      <!-- Message Aucune activité trouvée -->
+      <div id="no-results-message" class="alert alert-warning d-none" role="alert">
+        Aucune activité trouvée pour votre recherche. Essayez un autre mot-clé ou réinitialisez les filtres.
+      </div>
+
+      <!-- Grille des cartes (remplie par JavaScript) -->
+      <section aria-label="Liste des activités">
+        <div id="activities-container" class="row g-4"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Bootstrap : Détails d'une activité -->
+  <div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modalTitle">Détail de l'activité</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="" class="img-fluid rounded mb-3 w-100" style="max-height: 300px; object-fit: cover;">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span id="modalBadge" class="badge badge-category">Catégorie</span>
+            <span id="modalDuration" class="badge bg-secondary">Durée</span>
+            <span id="modalPrice" class="badge bg-success">Prix</span>
+          </div>
+          <p id="modalTagline" class="fw-semibold text-primary"></p>
+          <p id="modalDescription" class="mb-0"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+          <a id="modalReserveBtn" href="reservation.html" class="btn btn-terracotta">Réserver cette activité</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2026 Cap Bon Explorer — Projet pédagogique ISET Nabeul.</p>
+      <div>
+        <a href="index.html" class="me-3">Retour à l’accueil</a>
+        <a href="agenda.html" class="me-3">Agenda</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="bootstrap-5.3.9-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/activites.js"></script>
+</body>
+</html>

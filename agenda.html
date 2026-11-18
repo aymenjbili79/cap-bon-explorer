@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap Bon Explorer — Agenda des événements</title>
+  <link href="bootstrap-5.3.9-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img id="logo" src="images/logo.png" alt="Logo Cap Bon Explorer" class="me-2">
+          Cap Bon Explorer
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="agenda.html">Agenda</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Réservation</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact / FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h1>Agenda des événements</h1>
+        <p class="text-muted">
+          Retrouvez le calendrier des prochaines sorties guidées, ateliers d'artisanat et randonnées programmées à travers le Cap Bon pour la saison 2026–2027.
+        </p>
+      </div>
+
+      <section class="card p-4 shadow-sm border-0 mb-5">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <caption class="caption-top fw-semibold text-primary mb-2">
+              Programmation indicative des 6 prochaines sorties au Cap Bon
+            </caption>
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Activité</th>
+                <th scope="col">Heure</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Tarif</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>05/12/2026</td>
+                <td>Promenade photographique</td>
+                <td>09:30</td>
+                <td>Hammamet</td>
+                <td class="fw-bold">30 TND</td>
+              </tr>
+              <tr>
+                <td>12/12/2026</td>
+                <td>Initiation à la poterie</td>
+                <td>10:00</td>
+                <td>Nabeul</td>
+                <td class="fw-bold">35 TND</td>
+              </tr>
+              <tr>
+                <td>19/12/2026</td>
+                <td>Randonnée découverte</td>
+                <td>08:30</td>
+                <td>Cap Bon</td>
+                <td class="fw-bold">25 TND</td>
+              </tr>
+              <tr>
+                <td>09/01/2027</td>
+                <td>Découverte de la médina</td>
+                <td>10:00</td>
+                <td>Nabeul</td>
+                <td class="fw-bold">20 TND</td>
+              </tr>
+              <tr>
+                <td>16/01/2027</td>
+                <td>Peinture sur céramique</td>
+                <td>14:00</td>
+                <td>Nabeul</td>
+                <td class="fw-bold">25 TND</td>
+              </tr>
+              <tr>
+                <td>23/01/2027</td>
+                <td>Découverte du marché local</td>
+                <td>09:00</td>
+                <td>Nabeul</td>
+                <td class="fw-bold">15 TND</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+            <!-- Tableau responsive de l'agenda -->
+      <section class="card p-4 shadow-sm mb-5" style="background-color: #f5ebd8; border: 1px solid #e5d8c3;">
+        <h2 class="h4 mb-3">Prochaines expériences</h2>
+        <p class="text-muted mb-4">Une date vous intéresse ? Consultez la fiche détaillée de chaque sortie ou simulez votre budget dès maintenant.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="activites.html" class="btn btn-outline-primary">Voir toutes les activités</a>
+          <a href="reservation.html" class="btn btn-terracotta">Simuler une réservation</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2026 Cap Bon Explorer — Projet pédagogique ISET Nabeul.</p>
+      <div>
+        <a href="index.html" class="me-3">Retour à l’accueil</a>
+        <a href="activites.html" class="me-3">Activités</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap-5.3.9-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

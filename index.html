@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap Bon Explorer — Accueil</title>
+  <link rel="stylesheet" href="bootstrap-5.3.9-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. Slim Top Navbar (Logo left + Links horizontal right) -->
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm py-2">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img id="logo" src="images/logo.png" alt="Logo Cap Bon Explorer" class="me-2">
+          Cap Bon Explorer
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="activites.html">Activités</a></li>
+            <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+            <li class="nav-item"><a class="nav-link" href="reservation.html">Réservation</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact / FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- 2. Wide Horizontal Banner Strip (ends right under the navbar, no text inside) -->
+    <div id="hero-banner" role="img" aria-label="Vue panoramique du littoral du Cap Bon"></div>
+
+    <!-- 3. Intro Text Section Below the Banner -->
+    <section class="text-center py-4 mb-4">
+      <div class="container">
+        <h1 class="mb-3">Explorez l'âme authentique du Cap Bon</h1>
+        <p class="lead mx-auto mb-4" style="max-width: 720px;">
+          Cap Bon Explorer vous invite à découvrir le patrimoine, les savoir-faire et les paysages du Cap Bon. Parcourez nos expériences, choisissez une activité et préparez votre visite grâce à une simulation de réservation simple et transparente.
+        </p>
+        <a href="activites.html" class="btn btn-terracotta btn-lg px-4">Découvrir les activités</a>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Qui sommes-nous ? -->
+      <section class="mb-5">
+        <h2 class="mb-3">Qui sommes-nous ?</h2>
+        <p>
+          Née à Nabeul, Cap Bon Explorer est une initiative locale dédiée à la valorisation du tourisme culturel, artisanal et naturel de la péninsule du Cap Bon. Notre équipe sélectionne des parcours authentiques auprès d'artisans potiers, de guides passionnés et d'acteurs locaux engagés dans la préservation de notre patrimoine méditerranéen.
+        </p>
+        <p>
+          À travers ce portail interactif, nous souhaitons offrir aux visiteurs un accès simple et transparent aux richesses de la région, de Hammamet à Kélibia en passant par Kerkouane. Que vous voyagiez seul, en famille ou en groupe, préparez votre prochaine escapade en quelques clics.
+        </p>
+      </section>
+
+      <!-- Activités mises en avant -->
+      <section class="mb-5">
+        <h2 class="mb-4">Nos expériences phares</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 activity-card">
+              <img src="images/a01.jpg" class="card-img-top" alt="Ruelle traditionnelle de la médina de Nabeul">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-category align-self-start mb-2">Culture</span>
+                <h3 class="h5 card-title">Découverte de la médina — Nabeul</h3>
+                <p class="fw-bold text-primary mt-auto mb-3">20 TND / pers.</p>
+                <a href="activites.html" class="btn btn-outline-dark btn-sm">Voir le catalogue</a>
+              </div>
+            </article>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 activity-card">
+              <img src="images/a02.jpg" class="card-img-top" alt="Artisan façonnant de la poterie à Nabeul">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-category align-self-start mb-2">Artisanat</span>
+                <h3 class="h5 card-title">Atelier d’initiation à la poterie — Nabeul</h3>
+                <p class="fw-bold text-primary mt-auto mb-3">35 TND / pers.</p>
+                <a href="activites.html" class="btn btn-outline-dark btn-sm">Voir le catalogue</a>
+              </div>
+            </article>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 activity-card">
+              <img src="images/a05.jpg" class="card-img-top" alt="Côte rocheuse et mer turquoise à Kélibia">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-category align-self-start mb-2">Nature</span>
+                <h3 class="h5 card-title">Circuit du littoral — Kélibia</h3>
+                <p class="fw-bold text-primary mt-auto mb-3">40 TND / pers.</p>
+                <a href="activites.html" class="btn btn-outline-dark btn-sm">Voir le catalogue</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+          <!-- Pourquoi découvrir le Cap Bon ? -->
+      <section class="mb-5 p-4 rounded-3 shadow-sm" style="background-color: #e8d0a3; border: 1px solid #c9a365;">
+
+        <h2 class="mb-3">Pourquoi découvrir le Cap Bon ?</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Un savoir-faire ancestral :</strong> Rencontrez les maîtres potiers et céramistes qui font la renommée de Nabeul.</li>
+          <li class="list-group-item"><strong>Un patrimoine historique unique :</strong> Explorez la cité punique de Kerkouane classée à l'UNESCO et les médinas côtières.</li>
+          <li class="list-group-item"><strong>Des paysages variés :</strong> Alternez entre randonnées au Djebel Abderrahmane et criques sauvages à Kélibia.</li>
+          <li class="list-group-item"><strong>Une gastronomie généreuse :</strong> Dégustez les épices, agrumes et produits frais au cœur des marchés locaux.</li>
+        </ul>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="text-center p-5 mb-5 rounded-3 text-black" style="background-color: var(--primary-blue);">
+        <h2 class="text-black mb-3">Prêt à planifier votre visite ?</h2>
+        <p class="mb-4">Estimez instantanément le budget de votre sortie et bénéficiez d'une remise de 10 % dès 4 participants.</p>
+        <a href="reservation.html" class="btn btn-terracotta btn-lg">Simuler une réservation</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2026 Cap Bon Explorer — Projet pédagogique ISET Nabeul.</p>
+      <div>
+        <a href="index.html" class="me-3">Retour à l’accueil</a>
+        <a href="activites.html" class="me-3">Activités</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap-5.3.9-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

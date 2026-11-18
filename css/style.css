@@ -1,0 +1,271 @@
+/* =========================================================
+   CAP BON EXPLORER — Charte graphique : Sable, Beige, Or & Terre Cuite
+   ========================================================= */
+
+:root {
+  --sand-bg: #ce922a;         /* Fond général sable clair */
+  --beige-soft: #c3924a;      /* Encadrés beige doux */
+  --terracotta: #b55b1f;      /* Rouge terre cuite / poterie */
+  --terracotta-dark: #513716; /* Survol terre cuite */
+  --warm-orange: #ad5519;     /* Orange chaud */
+       /* Or / ambre */
+  --gold-light: #f6d379;      /* Or clair pour liens actifs */
+  --espresso: #3b2416;        /* Brun profond lisible pour titres et pied de page */
+  --text-body: #4a3728;       /* Texte principal chaleureux */
+  --border-sand: #d7c5a7;     /* Bordures fines beige */
+}
+
+/* Base & Page claire et aérée */
+body {
+  background-color: var(--sand-bg);
+  color: var(--text-body);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4 {
+  color: var(--espresso);
+  font-weight: 700;
+}
+
+/* Barre de navigation (Terre cuite & Or) */
+.custom-navbar {
+  background-color: var(--terracotta);
+  border-bottom: 3px solid var(--gold-accent);
+}
+
+/* Logo naturel, net et sans cadre artificiel */
+#logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.custom-navbar .navbar-brand {
+  color: #f5dcc9;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: var(--gold-light);
+}
+
+.custom-navbar .nav-link {
+  color: #fff8f0;
+  font-weight: 500;
+  margin-left: 0.75rem;
+  transition: color 0.25s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  color: var(--gold-light);
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--gold-light);
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold-light);
+}
+
+/* Bannière horizontale panoramique */
+#hero-banner {
+  width: 100%;
+  height: 240px;
+  margin: 0;
+  padding: 0;
+  background: url('../images/banner.jpg') center 65% / cover no-repeat;
+  border-bottom: 4px solid var(--gold-accent);
+}
+
+/* Boutons Terre Cuite / Orange Chaud */
+.btn-terracotta {
+  background-color: var(--terracotta);
+  color: #533c22;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-terracotta:hover,
+.btn-terracotta:focus {
+  background-color: var(--terracotta-dark);
+  color: #d6a960;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #a07558;
+}
+
+/* Cartes épurées sur fond blanc/sable */
+.card,
+.activity-card {
+  background-color: #e8c895e4;
+  border: 1px solid var(--border-sand);
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 10px rgba(59, 36, 22, 0.05);
+}
+
+.activity-card {
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-accent);
+  box-shadow: 0 8px 20px rgba(200, 85, 40, 0.12);
+}
+
+/* Taille uniforme pour toutes les images de cartes */
+.activity-card img,
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#modalImage {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Badges & Accents dorés/orangés */
+.badge-category {
+  background-color: var(--beige-soft);
+  color: var(--terracotta-dark);
+  border: 1px solid var(--gold-accent);
+  font-weight: 600;
+  padding: 0.4em 0.75em;
+}
+
+.text-primary {
+  color: var(--terracotta) !important;
+}
+
+/* Tableau de l'agenda (Tons crème et sable chaud) */
+.table-dark {
+  --bs-table-bg: var(--terracotta);
+  --bs-table-border-color: var(--terracotta-dark);
+}
+
+.table > tbody > tr > * {
+  background-color: #fdfaf4 !important;
+  color: var(--text-body);
+  border-bottom-color: var(--border-sand);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #f5ebd8 !important;
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color:#b96832 !important;
+}
+
+
+/* Accordéon FAQ */
+.accordion-button:not(.collapsed) {
+  background-color: var(--beige-soft);
+  color: var(--espresso);
+  font-weight: 600;
+}
+
+/* Pied de page */
+footer {
+  background-color: var(--espresso);
+  color: #d6c6a6;
+  border-top: 3px solid var(--gold-accent);
+}
+
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #bda86d;
+  text-decoration: underline;
+}
+
+/* Responsive mobile */
+@media (max-width: 576px) {
+  #hero-banner {
+    height: 170px;
+  }
+  #logo {
+    height: 80px;
+  }
+}
+/* Accordéon FAQ (Tons crème et sable chaud) */
+.accordion-item,
+.accordion-button {
+  background-color: #fdfaf4;
+  color: var(--espresso);
+  border-color: var(--border-sand);
+}
+
+.accordion-body {
+  background-color: #f8f1e5;
+  color: var(--text-body);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--beige-soft);
+  color: var(--espresso);
+  font-weight: 600;
+}
+/* Coins arrondis sur l'encadré des prix (comme les champs du formulaire) */
+.list-group-flush {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5d8c3;
+}
+
+.list-group-flush .list-group-item {
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
+} /* Coins arrondis sur le tableau Horaires d'accueil (Contact) */
+.table-bordered {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e5d8c3;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border-color: #e5d8c3;
+}
+/* Fond crème-beige doux pour la liste "Pourquoi découvrir le Cap Bon ?" */
+.list-group-flush .list-group-item {
+  background-color: #f7e8d0 !important;
+  border-color: #e5d8c3 !important;
+}
+
+
